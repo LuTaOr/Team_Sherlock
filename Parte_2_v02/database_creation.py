@@ -1,10 +1,10 @@
 import pandas as pd
 import sqlite3
 
-nombre_db = "proveedores"
+nombre_db = "./Parte_2_v02/proveedores.db"
 
 try:
-    connection = sqlite3.connect(nombre_db)
+    connection = sqlite3.connect(nombre_db) # Si no existe lo crea
     error = False
 except sqlite3.Error as e:
     print(e)
