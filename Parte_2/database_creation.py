@@ -33,6 +33,8 @@ def sql_query(query):
 
     return pd.DataFrame(respuesta,columns=names)
 
+#pd.read_sql(query, connection)
+
 #CREAMOS TABLAS.
 
 #TABLA COLORES
@@ -221,5 +223,25 @@ FROM ciudades
 '''
 print(sql_query(query))
 
+datos = {
+    "Getafe": "Madrid",
+    "Vilareal": "Castellon"
+    }
+
+for ciudad, provincia in datos.items():
+    query = f'''INSERT INTO Ciudades (nombre_ciudad, nombre_provincia)
+                VALUES ("{ciudad}", "{provincia}");
+                '''
+    cursor_db.execute(query)
+
+# query  = '''
+# INSERT INTO ciudades (nombre_ciudad,nombre_provincia)
+# VALUES ("Caceres","Extremadura")
+
+query = '''
+SELECT *
+FROM ciudades
+'''
+print(sql_query(query))
 
 conexion.close()
