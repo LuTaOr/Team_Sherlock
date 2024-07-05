@@ -1,3 +1,5 @@
+# Ejemplo de cómo se podrían introducir los datos en la BD
+
 datos = {
   'ciudades' : {'Getafe':'madrid',
                 'Vilareal' : 'Castellon'
