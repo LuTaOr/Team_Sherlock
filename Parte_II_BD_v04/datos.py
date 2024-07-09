@@ -53,7 +53,7 @@ def intro_datos (diccionario):
                   #VALUES ("{columna_1}", "{columna_siguiente}");'''
 
       else:
-        numero_columnas = (len(list(valores.values())[0]))
+        numero_columnas = (len(list(valores.values())[0])) 
 
         if numero_columnas == 3:
             columna_restante_1 = columna_siguiente[1]
