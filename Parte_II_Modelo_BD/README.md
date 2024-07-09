@@ -40,4 +40,4 @@ Una pieza sólo puede pertenecer a una categoría.
 
 ## Modelo BD
 
-![alt text](pics/Team_Sherlock_BD_2_dark.png)
+![alt text](Modelo_de_datos.png)
