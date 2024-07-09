@@ -1,6 +1,7 @@
 import pandas as pd
+import sqlite3
 
-def intro_datos(tabla, ruta, sep = ";"):
+def intro_datos(tabla, ruta, cursor, sep = ";"):
 
 
     df_csv = pd.read_csv(ruta, sep=";") # convierte el csv en un pd
@@ -14,8 +15,6 @@ def intro_datos(tabla, ruta, sep = ";"):
                     VALUES {df_csv.index[i]}'''
         
         cursor.execute(query)
-
-        print(query)  # se imprime solo para ver como lo devuelve. Se ha probado en el main.py con el formato que devuelve y si que funciona
 
 
 # ruta = "./CSVs_para_migrar_a_BD/ciudades.csv" # sera uno de los argumentos de la funcion
